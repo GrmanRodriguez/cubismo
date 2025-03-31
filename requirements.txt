@@ -1,0 +1,9 @@
+torch
+torchvision
+flow_matching
+tqdm
+numpy
+pillow
+gdown
+matplotlib
+ipywidgets
