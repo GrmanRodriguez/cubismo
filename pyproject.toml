@@ -1,0 +1,36 @@
+[project]
+name = "cubismo"
+version = "0.1.0"
+description = "Generate human faces using CFM."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [
+  { name = "German Rodriguez"}
+]
+dependencies = [
+    "torch",
+    "torchvision",
+    "flow_matching",
+    "tqdm",
+    "numpy",
+    "pillow",
+    "gdown",
+    "matplotlib",
+    "ipywidgets"
+]
+
+[project.urls]
+Homepage = "https://github.com/GrmanRodriguez/cubismo"
+Repository = "https://github.com/GrmanRodriguez/cubismo"
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["scripts*"]
