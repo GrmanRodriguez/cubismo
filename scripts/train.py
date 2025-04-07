@@ -92,7 +92,7 @@ def main(args):
     batch_progress_bar.close()
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Training script for CelebA model")
+    parser = argparse.ArgumentParser(description="Training script for Cubismo model")
     parser.add_argument("--checkpoint", type=str, default="", help="Path to checkpoint to load (optional)")
     parser.add_argument("--batch_size", type=int, default=20, help="Batch size for training")
     parser.add_argument("--loader_num_workers", type=int, default=2, help="Number of workers for data loader")
