@@ -58,7 +58,6 @@ class CFMPolicy:
         labels_num = [label.value for label in labels]
         input_size = [len(labels_num)]
         input_size.extend(self.__resolution)
-        print(input_size)
         ode_solution = self.__run_flow(
             torch.randn(input_size).cuda(),
             0,
