@@ -7,3 +7,6 @@ pillow
 gdown
 matplotlib
 ipywidgets
+uvicorn
+fastapi
+pydantic
