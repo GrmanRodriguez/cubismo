@@ -7,3 +7,4 @@ pillow
 gdown
 matplotlib
 ipywidgets
+wandb
