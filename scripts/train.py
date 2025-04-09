@@ -8,8 +8,10 @@ import torchvision
 from torch.utils.data import DataLoader
 from tqdm import tqdm
 from cubismo.model.unet import CFMUnet
+from cubismo.model.unet_attention import UNetCondAttn
 from cubismo.policy.cfm_policy import CFMPolicy
 from cubismo.utils.labels import Labels
+from cubismo.model.unet_attention import UNetCondAttn
 
 def convert_label_to_gender_label(target):
     """Convert labels to just 1 for men and 0 for women."""
@@ -28,7 +30,7 @@ def main(args):
     dataset = torchvision.datasets.CelebA(root="./data", split="all", download=True, transform=torchvision.transforms.Compose([torchvision.transforms.ToTensor()]))
     
     print("Creating model")
-    model = CFMUnet()
+    model = UNetCondAttn()
     if args.checkpoint != "":
         print(f"Loading weights from {args.checkpoint}")
         model.load_state_dict(torch.load(args.checkpoint))
