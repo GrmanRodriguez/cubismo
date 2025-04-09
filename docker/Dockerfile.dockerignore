@@ -1,9 +1,7 @@
-.env
 *data*
 *checkpoints*
 *venv*
 *__pycache__*
 *.egg-info*
-build
+*build*
 *evaluations*
-checkpoint.ckpt
